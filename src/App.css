@@ -1,0 +1,148 @@
+:root {
+  --bg: #0b0e11;
+  --card: #151a21;
+  --text: #e2e8f0;
+  --muted: #64748b;
+  --green: #10b981;
+  --blue: #3b82f6;
+  --purple: #8b5cf6;
+  --red: #ef4444;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* --- ONBOARDING --- */
+.card {
+  background: var(--card);
+  padding: 2rem;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5);
+  border: 1px solid #2d3748;
+}
+
+h1 { font-size: 2.2rem; margin: 0 0 5px 0; color: var(--green); }
+.subtitle { color: var(--muted); margin-bottom: 25px; font-size: 0.95rem; }
+
+.form-group { margin-bottom: 15px; text-align: left; }
+.form-row { display: flex; gap: 10px; }
+
+label { display: block; font-size: 0.8rem; color: var(--muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+input {
+  width: 100%;
+  padding: 14px;
+  background: #0b0e11;
+  border: 1px solid #334155;
+  color: white;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box; /* Crucial for padding */
+}
+input:focus { border-color: var(--green); }
+
+.btn-primary {
+  width: 100%;
+  padding: 16px;
+  background: var(--green);
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
+
+/* --- DASHBOARD --- */
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+h2 { margin: 0; font-size: 1.4rem; }
+.btn-reset { background: none; border: none; color: var(--muted); cursor: pointer; font-size: 0.85rem; }
+
+.hero-timer {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #2d3748;
+}
+.time-unit { display: flex; flex-direction: column; align-items: center; width: 60px; }
+.val { font-size: 2rem; font-weight: 800; line-height: 1; }
+.val.active { color: var(--green); }
+.label { font-size: 0.6rem; color: var(--muted); margin-top: 5px; font-weight: 600; }
+.sep { font-size: 1.5rem; color: #334155; position: relative; top: -15px; }
+
+.stats-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 25px; }
+
+.stat-card {
+  background: var(--card);
+  padding: 15px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid #2d3748;
+}
+.stat-card.money .icon { color: var(--green); background: rgba(16, 185, 129, 0.1); }
+.stat-card.health .icon { color: var(--blue); background: rgba(59, 130, 246, 0.1); }
+.stat-card.cigs .icon { color: var(--purple); background: rgba(139, 92, 246, 0.1); }
+
+.icon { padding: 10px; border-radius: 10px; display: flex; }
+.stat-card h3 { margin: 0 0 4px 0; font-size: 0.8rem; color: var(--muted); text-transform: uppercase; }
+.stat-card p { margin: 0; font-size: 1.2rem; font-weight: 700; }
+
+/* --- TIMELINE --- */
+.timeline-box {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #2d3748;
+}
+.timeline-header { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
+.gold-icon { color: #fbbf24; }
+.timeline-header h3 { margin: 0; font-size: 1rem; }
+
+.next-goal { background: #1a202c; padding: 15px; border-radius: 12px; border: 1px solid #2d3748; }
+.goal-info { display: flex; justify-content: space-between; margin-bottom: 10px; }
+.goal-info h4 { margin: 0; font-size: 0.95rem; }
+.goal-info small { color: var(--muted); font-size: 0.75rem; }
+.goal-desc { margin: 10px 0 0 0; font-size: 0.85rem; color: var(--muted); line-height: 1.4; }
+
+.progress-bar { width: 100%; height: 6px; background: #2d3748; border-radius: 3px; overflow: hidden; }
+.fill { height: 100%; background: var(--green); border-radius: 3px; transition: width 0.5s ease; }
+
+.history { margin-top: 15px; padding-top: 15px; border-top: 1px solid #2d3748; }
+.history-item { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
+.check-icon { color: var(--green); }
+```
+
+### **Step 3: Launch**
+
+1.  Save both files.
+2.  In your terminal, ensure you are in the `breath-new` (or `nicotine-app`) folder.
+3.  Run:
+    ```bash
+    npm run dev
+    ```
+4.  Open the `localhost` link.
+
+You should now have a clean, dark-themed app called **Hawa** with working logic, icons, and persistent storage. This completes Project 1! 🚀
