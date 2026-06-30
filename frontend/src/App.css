@@ -24,6 +24,9 @@ body {
   width: 100%;
   max-width: 400px;
 }
+.app-container.wide {
+  max-width: 960px;
+}
 
 /* --- ONBOARDING --- */
 .card {
@@ -133,16 +136,44 @@ h2 { margin: 0; font-size: 1.4rem; }
 .history { margin-top: 15px; padding-top: 15px; border-top: 1px solid #2d3748; }
 .history-item { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
 .check-icon { color: var(--green); }
-```
+.error-text { color: var(--red); font-size: 0.85rem; margin: 10px 0 0 0; }
+.switch-link { text-align: center; margin-top: 20px; font-size: 0.85rem; color: var(--muted); }
+.switch-link a { color: var(--green); text-decoration: none; font-weight: 600; }
 
-### **Step 3: Launch**
+.badge-toast {
+  background: rgba(251, 191, 36, 0.1);
+  border: 1px solid #fbbf24;
+  color: #fbbf24;
+  padding: 12px 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
 
-1.  Save both files.
-2.  In your terminal, ensure you are in the `breath-new` (or `nicotine-app`) folder.
-3.  Run:
-    ```bash
-    npm run dev
-    ```
-4.  Open the `localhost` link.
+.log-actions { display: flex; gap: 8px; margin-bottom: 20px; }
+.btn-log {
+  flex: 1;
+  padding: 12px 8px;
+  border-radius: 12px;
+  border: 1px solid #2d3748;
+  background: var(--card);
+  color: var(--text);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-log:hover { transform: translateY(-2px); }
+.btn-log:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-log.clean { border-color: var(--green); color: var(--green); }
+.btn-log.craving { border-color: var(--blue); color: var(--blue); }
+.btn-log.relapse { border-color: var(--red); color: var(--red); }
 
-You should now have a clean, dark-themed app called **Hawa** with working logic, icons, and persistent storage. This completes Project 1! 🚀
+.log-relapse { color: var(--red); }
+.log-clean { color: var(--green); }
+.log-craving { color: var(--blue); }
+
